@@ -1,35 +1,85 @@
 # 📝 Notes App
-A simple and modern web-based note-taking application built as part of the IBM x Hacktiv8 Capstone Project. This app allows users to create, view, archive, and delete notes, making it easier to manage personal or professional thoughts and reminders effectively.
+
+A simple and modern web-based note-taking application built as part of the **IBM x Hacktiv8 Capstone Project**. This app enables users to create, view, archive, unarchive, and delete notes, helping them manage personal or professional thoughts effectively.
 
 ---
 
 ## 📌 Description
-https://capstone-notes-app.netlify.app/
-**Notes App** is a single-page application (SPA) designed to help users manage their notes easily and efficiently. It supports core functionalities such as creating, deleting, archiving, and searching notes. Built using Web Components and Tailwind CSS, the app ensures a clean and responsive user interface. This capstone project is a demonstration of the skills learned during the IBM x Hacktiv8 collaboration program.
+
+🌐 [Live Demo](https://capstone-notes-app.netlify.app/)
+
+**Notes App** is a single-page application (SPA) built using **Web Components** and styled with **Tailwind CSS**. It leverages the [Dicoding Notes API](https://notes-api.dicoding.dev/) as the backend and uses **localStorage** to cache and manage notes locally for a smooth experience. This project showcases the application of modern frontend technologies and is supported by **AI assistance (IBM Granite)** during development.
 
 ---
 
 ## ⚙️ Technologies Used
 
-- **Frontend**: HTML, CSS, JavaScript (ES6), Web Components
-- **Styling**: Tailwind CSS
-- **Module Bundler**: Webpack
-- **Backend**: [Dicoding Notes API](https://notes-api.dicoding.dev/)
-- **AI Support**: IBM Granite (Planned Integration)
-- **Version Control**: Git & GitHub
-- **Deployment**: GitHub Pages / Vercel
+| Category         | Tech Stack                                        |
+|------------------|---------------------------------------------------|
+| **Frontend**     | HTML, CSS, JavaScript (ES6), Web Components       |
+| **Styling**      | Tailwind CSS                                      |
+| **Module Bundler** | Webpack                                         |
+| **Backend/API**  | [Dicoding Notes API](https://notes-api.dicoding.dev/) |
+| **Storage**      | `localStorage` (browser-based persistent storage) |
+| **AI Support**   | IBM Granite (AI-assisted coding and documentation)|
+| **Version Control** | Git & GitHub                                   |
+| **Deployment**   | Netlify (live demo), GitHub Pages (alternative)   |
 
 ---
 
 ## ✨ Features
 
-- ➕ Create new notes with a title and content
-- 🗃️ Archive and unarchive notes
-- 🔍 Search notes based on title or keywords
-- ❌ Delete notes permanently
-- 🧠 (Planned) AI-powered suggestions for note organization and titles
-- 📱 Fully responsive UI with modern design
-- 🚀 Fast loading and optimized build using Webpack
+- ➕ **Create Notes**: Add notes with title and content
+- 🗃️ **Archive & Unarchive**: Easily move notes between active and archived sections
+- 🔍 **Search**: Search notes by title or keywords
+- ✏️ **Edit**: Update existing note content
+- ❌ **Delete**: Remove notes permanently
+- 📦 **Local Storage**: Uses `localStorage` to retain notes even after page reloads
+- 🧠 **AI-Assisted Development**: IBM Granite used for speeding up code writing and documentation
+- 📱 **Responsive Design**: Optimized for desktop and mobile views
+- ⚡ **Fast Performance**: Built with Webpack for optimized delivery
+
+---
+
+## 🤖 AI Support Explanation
+
+While the application itself does not include end-user AI features, **IBM Granite** was used during development to:
+
+- Generate boilerplate code snippets and structure for Web Components
+- Assist in logic planning for note management (CRUD + archive separation)
+- Improve documentation (README, comments, user flow)
+- Provide suggestions for responsive UI adjustments using Tailwind CSS
+
+> IBM Granite effectively accelerated the development workflow by acting as a smart assistant during planning, coding, and documentation.
+
+---
+
+## 🔄 User Flow Diagram
+
+```
+┌────────────────────────────┐
+│     Input Note Form        │
+│  (Title + Content fields)  │
+└────────────┬───────────────┘
+             │
+             ▼
+     Click "Save" Button
+             │
+             ▼
+ ┌──────────────────────────┐
+ │ Note added to localStorage │
+ └────────────┬─────────────┘
+              │
+              ▼
+ ┌──────────────────────────────┐
+ │  Shown in "Active Notes" list│
+ └──────┬──────────────┬────────┘
+        ▼              ▼
+   [Archive]         [Delete]
+        │              │
+        ▼              ▼
+Move to Archive   Remove from localStorage
+```
 
 ---
 
@@ -42,3 +92,35 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini secara lokal di kompu
 ```bash
 git clone https://github.com/your-username/notes-app.git
 cd notes-app
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run Development Server
+
+```bash
+npm run dev
+```
+
+### 4. Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 📸 Screenshots
+
+### 📝 Halaman Catatan Aktif
+![Active Notes Screenshot](./screenshots/active-notes.png)
+
+### 🗃️ Halaman Catatan Diarsipkan
+![Archived Notes Screenshot](./screenshots/archived-notes.png)
+
+### 🤖 Bukti Dukungan AI Granite
+![AI Support Screenshot](./screenshots/ai-support.png)
