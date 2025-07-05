@@ -1,0 +1,11 @@
+import './index.html';          
+import './style/style.css';   
+import './components/app-bar.js';
+import './components/footer-bar.js';
+import './components/note-item.js';
+import './components/note-list.js';
+import './components/note-search.js';
+import './components/index.js';
+import './script/utils.js';
+import './api.js';
+import './app.js';

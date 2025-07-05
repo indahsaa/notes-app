@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NotesApp</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="/src/style/style.css" />
+  </head>
+  <body>
+    <app-bar data-user-name="Indah Sari Sitorus"></app-bar>
+
+    <main>
+      <loading-indicator id="loading" style="display: none;"></loading-indicator>
+      <search-bar></search-bar>
+      <div class="container">
+        <div style="display:flex;gap:8px;justify-content:center;margin-bottom:16px;">
+          <button id="showActiveBtn">Catatan Aktif</button>
+          <button id="showArchivedBtn">Catatan Arsip</button>
+        </div>
+        <section id="input-section" class="input-section">
+          <h2>Buat Catatan Baru</h2>
+          <form id="notesForm" class="notes-form">
+            <div class="form-group">
+              <label for="noteTitle">Judul</label>
+              <input
+                type="text"
+                name="noteTitle"
+                id="noteTitle"
+                required
+                minlength="3"
+                placeholder="Masukann Judul Catatanmu"
+                aria-label="Judul Catatan"
+              />
+              <span class="error-message" id="titleError"></span>
+            </div>
+            <div class="form-group">
+              <label for="noteDesc">Deskripsi</label>
+              <textarea
+                name="noteDesc"
+                id="noteDesc"
+                cols="20"
+                rows="8"
+                required
+                minlength="5"
+                placeholder="Deskripsi catatanmu di sini..."
+                aria-label="Isi Catatan"
+              ></textarea>
+              <span class="error-message" id="descError"></span>
+            </div>
+            <button type="submit" id="saveBtn">
+              <i class="fa-solid fa-floppy-disk"></i> Simpan
+            </button>
+          </form>
+        </section>
+        <note-search></note-search>
+        <section id="note" class="note">
+          <div class="title-section">
+            <h2>Catatan Aktif <span id="currentYear"></span></h2>
+          </div>
+          <div id="noteListContainer" class="note-list-container">
+            <note-list data-archived="false"></note-list>
+          </div>
+        </section>
+        <section id="archivedPage" style="display:none;">
+          <div class="title-section">
+            <h2>Catatan Diarsipkan</h2>
+          </div>
+          <div id="archivedNoteListContainer" class="note-list-container">
+            <note-list data-archived="true"></note-list>
+          </div>
+        </section>
+        <!-- Modal Edit Catatan -->
+        <div id="editNoteModal" class="modal" style="display:none;">
+          <div class="modal-content">
+            <span id="closeEditModal" class="close">&times;</span>
+            <h2>Edit Catatan</h2>
+            <form id="editNoteForm">
+              <div class="form-group">
+                <label for="editNoteTitle">Judul</label>
+                <input type="text" id="editNoteTitle" name="editNoteTitle" required minlength="3" />
+                <span class="error-message" id="editTitleError"></span>
+              </div>
+              <div class="form-group">
+                <label for="editNoteDesc">Deskripsi</label>
+                <textarea id="editNoteDesc" name="editNoteDesc" required minlength="5" rows="8"></textarea>
+                <span class="error-message" id="editDescError"></span>
+              </div>
+              <button type="submit" id="updateBtn">
+                <i class="fa-solid fa-floppy-disk"></i> Update
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer-bar></footer-bar>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
