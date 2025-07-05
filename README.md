@@ -89,7 +89,7 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini secara lokal di kompu
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/notes-app.git
+https://github.com/indahsaa/notes-app.git
 cd notes-app
 ```
 
