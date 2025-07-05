@@ -19,7 +19,6 @@ A simple and modern web-based note-taking application built as part of the **IBM
 | **Frontend**     | HTML, CSS, JavaScript (ES6), Web Components       |
 | **Styling**      | Tailwind CSS                                      |
 | **Module Bundler** | Webpack                                         |
-| **Backend/API**  | [Dicoding Notes API](https://notes-api.dicoding.dev/) |
 | **Storage**      | `localStorage` (browser-based persistent storage) |
 | **AI Support**   | IBM Granite (AI-assisted coding and documentation)|
 | **Version Control** | Git & GitHub                                   |
@@ -103,7 +102,7 @@ npm install
 ### 3. Run Development Server
 
 ```bash
-npm run dev
+npm run start-dev
 ```
 
 ### 4. Build for Production
