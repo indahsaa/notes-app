@@ -8,8 +8,10 @@ A simple and modern web-based note-taking application built as part of the **IBM
 
 🌐 [Live Demo](https://capstone-notes-app.netlify.app/)
 
-**Notes App** is a single-page application (SPA) built using **Web Components** and styled with **Tailwind CSS**. It leverages the [Dicoding Notes API](https://notes-api.dicoding.dev/) as the backend and uses **localStorage** to cache and manage notes locally for a smooth experience. This project showcases the application of modern frontend technologies and is supported by **AI assistance (IBM Granite)** during development.
 
+**Notes App** is a single-page application (SPA) built using **Web Components** and styled with CSS  and uses 
+**localStorage** to cache and manage notes locally for a smooth experience. This project showcases the application of modern frontend technologies and is supported by 
+**AI assistance (IBM Granite)** during development.
 ---
 
 ## ⚙️ Technologies Used
